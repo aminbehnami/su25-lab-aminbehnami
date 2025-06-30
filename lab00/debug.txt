@@ -1,2 +1,1 @@
 This is my debug file for lab00. Everything is working correctly!
-Debugging complete!

@@ -1,1 +1,12 @@
-This is my debug file for lab00. Everything is working correctly!
+OSTYPE='darwin22'
+BASH_VERSION='GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin22)
+Copyright (C) 2007 Free Software Foundation, Inc.'
+SH_VERSION='GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin22)
+Copyright (C) 2007 Free Software Foundation, Inc.'
+GIT_VERSION='git version 2.39.2 (Apple Git-143)'
+PYTHON3_VERSION='Python 3.13.5'
+PYTHON_VERSION='gen-debug.sh: line 12: python: command not found'
+PY_VERSION='gen-debug.sh: line 13: py: command not found'
+JAVA_VERSION='openjdk version "21.0.7" 2025-04-15 LTS
+OpenJDK Runtime Environment Temurin-21.0.7+6 (build 21.0.7+6-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.7+6 (build 21.0.7+6-LTS, mixed mode)'

@@ -1,30 +1,33 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
-// Structs allow you to hold data items of different types in a single variable
-// Struct definitions can be used to declare a struct variable within your program
-// Struct definitions are typically done outside of a function
-struct Student {
+// Define struct with typedef
+typedef struct {
+    char name[50];
     int id;
-    char* name;
-};
+} Student;
+
+// Function to print student info
+void print_student(Student s) {
+    printf("Student Name: %s\n", s.name);
+    printf("Student ID: %d\n", s.id);
+}
+
+// Function that takes pointer to student and updates name
+void update_name(Student* s, const char* new_name) {
+    strcpy(s->name, new_name);
+}
 
 int main() {
-  // TODO: declare a variable student of type struct Student
-  // Note: this struct is stored on the stack
-  ________________ student;
+    Student s1;
+    strcpy(s1.name, "Alice");
+    s1.id = 12345;
 
-  // TODO: print out the size of a struct Student
-  // While this may seem out of place now, it will be useful in the future!
-  // Hint: there's an operator that can calculate this for you!
-  printf("Size of a struct Student: %lu bytes\n", ______);
+    print_student(s1);
 
-  // TODO: set student's id field to 5
-  // Hint: the dot notation accesses a struct's fields
-  ______.______ = 5;
+    update_name(&s1, "Bob");
+    printf("\nAfter update:\n");
+    print_student(s1);
 
-  // TODO: print out student's id field
-  printf("Student's ID: %d\n", ______);
-
-  return 0;
+    return 0;
 }

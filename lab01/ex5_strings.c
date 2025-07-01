@@ -2,18 +2,18 @@
 #include <string.h>
 
 int main() {
-    char src[] = "CS 61C";       // source string
-    char dest[50];               // enough room for string + null terminator
+  char src[] = "CS 61C";
+  char dest[50];
 
-    strcpy(dest, src);           // copy string
+  strcpy(dest, src);
 
-    printf("Original string: %s\n", dest);
-    printf("Length of string: %lu\n", strlen(dest));
+  printf("Original string: %s\n", dest);
+  printf("Length of string: %lu\n", strlen(dest));
 
-    dest[3] = '-';               // mutate the string: change '6' to '-'
+  dest[3] = '-';
 
-    printf("Modified string: %s\n", dest);
-    printf("New length: %lu\n", strlen(dest));
+  printf("Modified string: %s\n", dest);
+  printf("New length: %lu\n", strlen(dest));
 
-    return 0;
+  return 0;
 }

@@ -45,7 +45,8 @@ bool check_length(const char *password) {
 }
 
 bool check_name(const char *first_name, const char *last_name, const char *password) {
-    return !strstr(password, first_name) && !strstr(password, last_name);
+    return strstr(password, first_name) == NULL
+        && strstr(password, last_name) == NULL;
 }
 
 bool check_password(const char *first_name, const char *last_name, const char *password) {

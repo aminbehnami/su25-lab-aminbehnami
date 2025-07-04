@@ -5,12 +5,13 @@
 # Please add your commands below this line
 start
 next
-step
+next
+next
+next
 step
 step
 print password
 finish
-step
 step
 next
 finish

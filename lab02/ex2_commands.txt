@@ -8,8 +8,7 @@ next
 step
 step
 print password
-finish         # shows return of check_lower
-step
-step
-finish         # shows return of check_length
+finish   # prints return of check_lower
+step     # step into check_length
+finish   # prints return of check_length
 quit

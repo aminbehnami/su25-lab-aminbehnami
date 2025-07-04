@@ -11,8 +11,7 @@ void jedi(int *arr, int size) {
 }
 
 void ben(int *arr, int size) {
-    int *ptr = NULL;
-    *ptr = 10;
+    arr[0] = 10;  // fixed from NULL pointer dereference
     jero(arr, size);
 }
 
@@ -21,9 +20,11 @@ void jero(int *arr, int size) {
     if (new_arr == NULL) {
         return;
     }
+
     for (int i = 0; i < size; ++i) {
         new_arr[i] = arr[i];
     }
+
     jedi(new_arr, size);
     free(new_arr);
 }

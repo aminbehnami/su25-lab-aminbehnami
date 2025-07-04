@@ -7,10 +7,9 @@ break check_number
 run
 step
 backtrace
-break 31 if letter=='0'
+break 43 if *password=='0'
 continue
-print letter
-print is_in_range
+print *password
 print lower
 print upper
 quit

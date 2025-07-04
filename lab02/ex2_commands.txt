@@ -7,6 +7,7 @@ start
 next
 step
 step
+step
 print password
 finish
 step

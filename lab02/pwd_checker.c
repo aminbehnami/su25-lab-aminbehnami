@@ -37,7 +37,11 @@ bool check_number(const char *password) {
 }
 
 bool check_length(const char *password) {
-    return strlen(password) >= 10;
+    int length = 0;
+    while (password[length] != '\0') {
+        length++;
+    }
+    return length >= 10;
 }
 
 bool check_name(const char *first_name, const char *last_name, const char *password) {

@@ -7,7 +7,7 @@ break check_number
 run
 step
 backtrace
-break 43 if *password=='0'
+break 31 if *password=='0'
 continue
 print *password
 print lower

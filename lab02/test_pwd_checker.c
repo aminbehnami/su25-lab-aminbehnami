@@ -1,14 +1,47 @@
-#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
 #include "pwd_checker.h"
 
-int main() {
-    printf("Running tests...\n\n");
+bool check_length(const char *password) {
+    return strlen(password) >= 10;
+}
 
-    const char *test1_first = "Abraham";
-    const char *test1_last = "Garcia";
-    const char *test1_pwd = "Zyx987!@#q";  // strong password
-    bool test1 = check_password(test1_first, test1_last, test1_pwd);
-    printf("Test1 result: %d\n", test1);  // Should be 1 (true)
+bool check_range(char letter, char lower, char upper) {
+    return letter >= lower && letter <= upper;  // inclusive range
+}
 
-    return 0;
+bool check_upper(const char *password) {
+    while (*password) {
+        if (check_range(*password, 'A', 'Z')) return true;
+        password++;
+    }
+    return false;
+}
+
+bool check_lower(const char *password) {
+    while (*password) {
+        if (check_range(*password, 'a', 'z')) return true;
+        password++;
+    }
+    return false;
+}
+
+bool check_number(const char *password) {
+    while (*password) {
+        if (check_range(*password, '0', '9')) return true;
+        password++;
+    }
+    return false;
+}
+
+bool check_name(const char *first_name, const char *last_name, const char *password) {
+    return strstr(password, first_name) == NULL && strstr(password, last_name) == NULL;
+}
+
+bool check_password(const char *first_name, const char *last_name, const char *password) {
+    return check_length(password) &&
+           check_upper(password) &&
+           check_lower(password) &&
+           check_number(password) &&
+           check_name(first_name, last_name, password);
 }

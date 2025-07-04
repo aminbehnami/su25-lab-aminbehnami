@@ -5,9 +5,6 @@
 # Please add your commands below this line
 start
 next
-next
-next
-next
 step
 step
 print password

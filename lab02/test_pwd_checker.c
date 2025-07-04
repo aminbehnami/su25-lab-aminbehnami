@@ -7,7 +7,7 @@ bool check_length(const char *password) {
 }
 
 bool check_range(char letter, char lower, char upper) {
-    return letter >= lower && letter <= upper;  // inclusive range
+    return letter >= lower && letter <= upper;
 }
 
 bool check_upper(const char *password) {

@@ -5,10 +5,15 @@
 # Please add your commands below this line
 start
 next
+next
+next
+next
 step
 step
 print password
-finish     # return from check_lower
-step       # into check_length
-finish     # return from check_length
+finish
+step
+step
+finish
+print length
 quit

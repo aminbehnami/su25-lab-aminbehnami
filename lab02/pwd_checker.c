@@ -1,3 +1,4 @@
+// pwd_checker.c
 #include <string.h>
 #include <stdbool.h>
 #include "pwd_checker.h"
@@ -37,6 +38,7 @@ bool check_number(const char *password) {
 }
 
 bool check_length(const char *password) {
+    // manual counter so `length` is a real local
     int length = 0;
     while (password[length] != '\0') {
         length++;

@@ -3,17 +3,17 @@
 # Lines starting with # are comments, feel free to add any to document your commands
 
 # Please add your commands below this line
-start
-next
-next
-next
-next
-step
-step
-print password
-finish
-step
-step
-finish
-print length
-quit
+start            # 1) run to first line of main
+next             # 2) skip printf
+next             # 3) skip test1_first
+next             # 4) skip test1_last
+next             # 5) skip test1_pwd
+step             # 6) step into check_password
+step             # 7) step into check_lower
+print password   # 8) show the password string
+finish           # 9) exit check_lower, prints its return
+step             # 10) step into check_length
+next             # 11) run to the return line inside check_length
+print length     # 12) print the local 'length' variable
+finish           # 13) exit check_length, prints its return
+quit             # 14) exit GDB (you’ll type “y” interactively)
